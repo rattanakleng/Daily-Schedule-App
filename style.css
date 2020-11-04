@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -30,16 +34,34 @@ textarea{
   border-radius: 15px;
 }
 
+.row-ctner {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.row-ctner p {
+  margin: 0;
+}
+
 .row {
   white-space: pre-wrap;
   height: 80px;
   border-top: 1px solid white;;
+  width: 86%;
+  padding: 30px 0 0 8px;
 }
 
 .hour {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+  border-right: 1px dashed #000000;
+  width: 8%;
+  height: 80px;
+  text-align: right;
+  padding-right: 8px;
+  padding-top: 30px;
 }
 
 .past {
@@ -63,9 +85,54 @@ textarea{
   border-bottom-right-radius: 15px;
   background-color: #06AED5;
   color: white;
+  height: 80px;
+  width: 8%;
+  padding-top: 30px;
+  border-top: 1px solid;
+  text-align: center;
+
 }
 
 .saveBtn i:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+  .row {
+    height: 80px;
+    width: 86%;
+    padding: 30px 0 0 8px;
+  }
+  
+  .hour {
+    width: 8%;
+    height: 80px;
+    padding-right: 8px;
+    padding-top: 30px;
+  }
+
+  .saveBtn {
+    height: 80px;
+    width: 8%;
+    padding-top: 30px;
+  }
+ }
+
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 639px) { 
+  .jumbotron {
+    text-align: center;
+    border-radius: 0;
+    border-bottom: 10px solid black;
+    font-size: .5em;
+  }
+}
+
+@media (max-width: 359px) { 
+  .display-3 {
+    font-size: 2.5rem;
+ }
 }
