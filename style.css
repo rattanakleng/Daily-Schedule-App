@@ -1,20 +1,13 @@
+/* Reset style */
 * {
   margin: 0;
   padding: 0;
 }
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
-}
-
-textarea{
-  background: transparent;
-  border: none;
-  resize: none;
-  color: #000000;
-  border-left: 1px solid black;
-  padding: 10px;
 }
 
 .jumbotron {
@@ -25,23 +18,18 @@ textarea{
   border-bottom: 10px solid black;
 }
 
-.description{
+.description {
   white-space: pre-wrap;
 }
 
-.time-block{
+.time-block {
   text-align: center;
   border-radius: 15px;
 }
 
 .row-ctner {
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
-}
-
-.row-ctner p {
   margin: 0;
+  margin-top: -16px;
 }
 
 .row {
@@ -49,7 +37,25 @@ textarea{
   height: 80px;
   border-top: 1px solid white;;
   width: 86%;
-  padding: 30px 0 0 8px;
+  margin-left: 0;
+}
+
+input {
+  margin: 0;
+  border: none;
+  padding-left: 15px; 
+  padding-right: 15px;
+}
+
+input:focus {
+  outline: none;
+  color: white;
+}
+
+.row-ctner {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
 }
 
 .hour {
@@ -79,7 +85,8 @@ textarea{
   color: white;
 }
 
-.saveBtn {
+.save-btn {
+  border: none;
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -87,52 +94,21 @@ textarea{
   color: white;
   height: 80px;
   width: 8%;
-  padding-top: 30px;
   border-top: 1px solid;
   text-align: center;
-
+  
 }
 
-.saveBtn i:hover {
+.save-btn:focus {
+  outline: none;
+}
+
+.save-btn i:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
 
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-
-  .row {
-    height: 80px;
-    width: 86%;
-    padding: 30px 0 0 8px;
-  }
-  
-  .hour {
-    width: 8%;
-    height: 80px;
-    padding-right: 8px;
-    padding-top: 30px;
-  }
-
-  .saveBtn {
-    height: 80px;
-    width: 8%;
-    padding-top: 30px;
-  }
- }
-
- /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 639px) { 
-  .jumbotron {
-    text-align: center;
-    border-radius: 0;
-    border-bottom: 10px solid black;
-    font-size: .5em;
-  }
+.save-icon {
+  font-size: 1.5rem;
 }
 
-@media (max-width: 359px) { 
-  .display-3 {
-    font-size: 2.5rem;
- }
-}
